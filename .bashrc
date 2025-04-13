@@ -169,7 +169,7 @@ if [ "$color_prompt" = yes ]; then
     PS1+='if [ -n "$GIT_STAGED" ]; then echo -n " \[\033[32m\]${GIT_STAGED}"; fi; '
     # Unstaged with separator if needed - make | yellow
     PS1+='if [ -n "$GIT_UNSTAGED" ]; then '
-    PS1+='if [ -n "$GIT_STAGED" ]; then echo -n " \[\033[33m\]| "; fi; '
+    PS1+='if [ -n "$GIT_STAGED" ]; then echo -n " \[\033[33m\]| "; else echo -n " "; fi; '
     PS1+='echo -n "\[\033[31m\]${GIT_UNSTAGED}"; fi; '
     # Closing bracket always yellow
     PS1+='echo "\[\033[33m\]]"; fi)\[\033[00m\]\$ '
